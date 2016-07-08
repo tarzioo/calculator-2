@@ -1,6 +1,9 @@
-def add(num1, num2):
-    return num1 + num2
-
+def add(*args):
+    total = 0
+    for element in args:
+        total = total + element
+        print total
+    return total
 
 def subtract(num1, num2):
     return num1 - num2

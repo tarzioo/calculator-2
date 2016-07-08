@@ -24,7 +24,7 @@ while True:
     #Check if length of tokens is 2 
     elif len(tokens) == 2:
         #Type cast from raw_input to integer
-        integer_one = int(tokens[1])
+        integer_one = float(tokens[1])
         #if tokens[0] is equal to square, call upon the square function,
         #setting integer_one as its parameter
         if tokens[0] == 'square':
@@ -37,12 +37,13 @@ while True:
             print "Unexpected input"
             continue
 
-    elif len(tokens) == 3:
-        integer_one = int(tokens[1])
-        integer_two = int(tokens[2])
+    elif len(tokens) > 3:
+        integer_one = float(tokens[1])
+        integer_two = float(tokens[2])
+        integer_three = float(tokens[3])
 
         if tokens[0] == '+':
-            print add(integer_one, integer_two)
+            print add(integer_one, integer_two, integer_three)
         elif tokens[0] == '-':
             print subtract(integer_one, integer_two)
         elif tokens[0] == '*':
@@ -57,6 +58,8 @@ while True:
             print "Unexpected input"
             continue
 
+    # elif len(tokens) > 3:
+    #     print reduce(tokens[0]), range(tokens[1], tokens[len(tokens)])
     else:
         print "Unexpected input"
         continue    
