@@ -15,12 +15,12 @@ while True:
     # Check the length of tokens, if it is = 1 then check if it is 'q' 
     # or "Q". If neither, then throw error.
     if len(tokens) == 1:
-        if tokens[0] == 'q' or tokens[0] == 'Q':
+        if tokens[0].lower() == 'q':
             break
 
         else:
             print "Unexpected input"
-            break
+            continue
     #Check if length of tokens is 2 
     elif len(tokens) == 2:
         #Type cast from raw_input to integer
@@ -35,7 +35,7 @@ while True:
         # throws error if it's anything else
         else:
             print "Unexpected input"
-            break
+            continue
 
     elif len(tokens) == 3:
         integer_one = int(tokens[1])
@@ -55,10 +55,10 @@ while True:
             print mod(integer_one, integer_two)
         else:
             print "Unexpected input"
-            break
+            continue
 
     else:
         print "Unexpected input"
-        break    
+        continue    
 
 # Your code goes here
